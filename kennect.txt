@@ -1,0 +1,50 @@
+// 1.2 Write an implementation of getElementByld, which performs the same basic task as that of actual getElementByld, 
+//     (don't use shortcuts like queryselector)
+
+ 	-> getElementById() method returns the elements that ID which is passed to the function i.e getElementById("myFun");
+ 	-> change the value of any particular element or get a particular element
+ 	-> if we can pass the wrong ID it will return the Null
+
+	<script>
+        	// Function to change the color of element
+
+	 	function fun() {
+            		var demo = document.getElementById("myFun");
+           		demo.style.color = "green";
+        	}
+
+	</script>
+
+	<body>
+    		<h1 id="myFun">Chetan Gavhane</h1>
+    		<h2>getElementById()</h2>
+    		<input type="button" onclick="myFun()" value="Click me" />
+	</body>
+
+
+
+
+
+// 7.1 Binary Search Tree (BST)
+
+	-> BST is a node-based binary tree data structure
+	-> The left subtree of a node having only keys lesser than the node’s key.
+	-> The right subtree of a node having only keys greater than the node’s key.
+	-> The left and right subtree must also be a binary search tree. 
+	-> There must not be a duplicate node/nodes.
+
+	// A utility function to search a given key in BST 
+
+	public Node search(Node root, int key)
+	{
+		// Base Cases: root is null or key is present at root
+		if (root==null || root.key==key)
+			return root;
+
+		// Key is greater than root's key
+		if (root.key < key)
+			return search(root.right, key);
+
+		// Key is smaller than root's key
+			return search(root.left, key);
+	}
