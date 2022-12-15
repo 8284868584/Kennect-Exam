@@ -16,7 +16,7 @@ function checkIsPrime(no){
     for(var i=5;i*i<=no;i=i+6){
         if(no%i==0 || no%(i+2)==0){
             return  false;
-            break;
+           
         }
     }
     return true;
